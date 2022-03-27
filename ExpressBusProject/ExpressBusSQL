@@ -1,0 +1,2928 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 일요일-3월-27-2022   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table ANSWER
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."ANSWER" 
+   (	"CS_NO" NUMBER(10,0), 
+	"CS_ANSWER" VARCHAR2(200 BYTE), 
+	"ANSWER_DATE" DATE, 
+	"SYS_ID" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table BUS
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."BUS" 
+   (	"BUS_ID" VARCHAR2(20 BYTE), 
+	"COM_NAME" VARCHAR2(20 BYTE), 
+	"GRADE" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table CS
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."CS" 
+   (	"CS_NO" NUMBER(10,0), 
+	"MEM_ID" VARCHAR2(20 BYTE), 
+	"CS_DATE" DATE, 
+	"CS_TITLE" VARCHAR2(20 BYTE), 
+	"CS_CONTENT" VARCHAR2(200 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table MEMBER
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."MEMBER" 
+   (	"MEM_ID" VARCHAR2(20 BYTE), 
+	"PASSWORD" VARCHAR2(30 BYTE), 
+	"MEM_NAME" VARCHAR2(100 BYTE), 
+	"BIRTHDAY" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table NOTICE
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."NOTICE" 
+   (	"NOTICE_NO" NUMBER(10,0), 
+	"NOTICE_DATE" DATE, 
+	"NOTICE_TITLE" VARCHAR2(200 BYTE), 
+	"SYS_ID" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table PAYMENT
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."PAYMENT" 
+   (	"RESERVATION_NO" NUMBER(10,0), 
+	"PAY_DATE" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table PAYMENT_METHOD
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."PAYMENT_METHOD" 
+   (	"METHOD_ID" VARCHAR2(20 BYTE), 
+	"METHOD_NAME" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table REFUND
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."REFUND" 
+   (	"RESERVATION_NO" NUMBER(10,0), 
+	"REFUND_DATE" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table RESERVATION
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."RESERVATION" 
+   (	"RESERVATION_NO" NUMBER(10,0), 
+	"MEM_ID" VARCHAR2(20 BYTE), 
+	"PRICE_SUM" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table RESERV_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."RESERV_INFO" 
+   (	"RESERVATION_NO" NUMBER(10,0), 
+	"RUN_ID" NUMBER(10,0), 
+	"RIDE_DATE" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table RESERV_SEAT
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."RESERV_SEAT" 
+   (	"SEAT_ID" VARCHAR2(20 BYTE), 
+	"BUS_ID" VARCHAR2(20 BYTE), 
+	"RESERVATION_NO" NUMBER(10,0), 
+	"RUN_ID" NUMBER(10,0), 
+	"RESERV_DATE" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table RUN
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."RUN" 
+   (	"RUN_ID" NUMBER(10,0), 
+	"BUS_ID" VARCHAR2(20 BYTE), 
+	"START_TERMINAL" VARCHAR2(20 BYTE), 
+	"END_TERMINAL" VARCHAR2(20 BYTE), 
+	"START_TIME" DATE, 
+	"END_TIME" DATE, 
+	"PRICE" NUMBER(20,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table SEAT
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."SEAT" 
+   (	"SEAT_ID" VARCHAR2(20 BYTE), 
+	"BUS_ID" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table SYSTEM
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."SYSTEM" 
+   (	"SYS_ID" VARCHAR2(20 BYTE), 
+	"SYS_NAME" VARCHAR2(20 BYTE), 
+	"SYS_PASSWORD" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table TERMINAL
+--------------------------------------------------------
+
+  CREATE TABLE "BUS"."TERMINAL" 
+   (	"TERMINAL_ID" VARCHAR2(20 BYTE), 
+	"TERMINAL_NAME" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into BUS.ANSWER
+SET DEFINE OFF;
+Insert into BUS.ANSWER (CS_NO,CS_ANSWER,ANSWER_DATE,SYS_ID) values (1,'맞습니다.',to_date('22/02/24','RR/MM/DD'),'system');
+REM INSERTING into BUS.BUS
+SET DEFINE OFF;
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1001','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1002','금호고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1003','동양고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1004','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1005','금호고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1006','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1007','동양고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1008','금호고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1009','중앙고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1010','중앙고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1101','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1102','금호고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1103','동양고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1104','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1105','금호고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1106','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1107','동양고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1108','금호고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1109','중앙고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1110','중앙고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1201','한일고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1202','중앙고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1203','동양고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1204','한일고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1205','중앙고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1206','중앙고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1207','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1208','한일고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1209','동양고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1210','한일고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1301','한일고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1302','한일고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1303','금호고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1304','중앙고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1305','중앙고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1306','금호고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1307','중앙고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1308','한일고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1309','중앙고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1310','금호고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1401','중앙고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1402','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1403','천일고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1404','중앙고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1405','동양고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1406','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1407','삼화고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1408','한일고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1409','동양고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1410','금호고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1501','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1502','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1503','한일고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1504','한일고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1505','중앙고속','일반');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1506','천일고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1507','동양고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1508','동양고속','우등');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1509','천일고속','프리미엄');
+Insert into BUS.BUS (BUS_ID,COM_NAME,GRADE) values ('1510','중앙고속','우등');
+REM INSERTING into BUS.CS
+SET DEFINE OFF;
+Insert into BUS.CS (CS_NO,MEM_ID,CS_DATE,CS_TITLE,CS_CONTENT) values (1,'megi',to_date('22/02/24','RR/MM/DD'),'안예지 바보','입니다.');
+REM INSERTING into BUS.MEMBER
+SET DEFINE OFF;
+Insert into BUS.MEMBER (MEM_ID,PASSWORD,MEM_NAME,BIRTHDAY) values ('megi','megi','메기','970701');
+REM INSERTING into BUS.NOTICE
+SET DEFINE OFF;
+Insert into BUS.NOTICE (NOTICE_NO,NOTICE_DATE,NOTICE_TITLE,SYS_ID) values (1,to_date('22/02/16','RR/MM/DD'),'바보','system');
+REM INSERTING into BUS.PAYMENT
+SET DEFINE OFF;
+REM INSERTING into BUS.PAYMENT_METHOD
+SET DEFINE OFF;
+REM INSERTING into BUS.REFUND
+SET DEFINE OFF;
+Insert into BUS.REFUND (RESERVATION_NO,REFUND_DATE) values (1,to_date('22/02/27','RR/MM/DD'));
+Insert into BUS.REFUND (RESERVATION_NO,REFUND_DATE) values (2,to_date('22/02/27','RR/MM/DD'));
+Insert into BUS.REFUND (RESERVATION_NO,REFUND_DATE) values (3,to_date('22/03/27','RR/MM/DD'));
+REM INSERTING into BUS.RESERVATION
+SET DEFINE OFF;
+Insert into BUS.RESERVATION (RESERVATION_NO,MEM_ID,PRICE_SUM) values (1,'megi',null);
+Insert into BUS.RESERVATION (RESERVATION_NO,MEM_ID,PRICE_SUM) values (2,'megi',null);
+Insert into BUS.RESERVATION (RESERVATION_NO,MEM_ID,PRICE_SUM) values (3,'megi',null);
+Insert into BUS.RESERVATION (RESERVATION_NO,MEM_ID,PRICE_SUM) values (4,'megi',36000);
+Insert into BUS.RESERVATION (RESERVATION_NO,MEM_ID,PRICE_SUM) values (5,'megi',36000);
+REM INSERTING into BUS.RESERV_INFO
+SET DEFINE OFF;
+Insert into BUS.RESERV_INFO (RESERVATION_NO,RUN_ID,RIDE_DATE) values (1,41,to_date('22/02/18','RR/MM/DD'));
+Insert into BUS.RESERV_INFO (RESERVATION_NO,RUN_ID,RIDE_DATE) values (2,39,to_date('22/02/19','RR/MM/DD'));
+Insert into BUS.RESERV_INFO (RESERVATION_NO,RUN_ID,RIDE_DATE) values (2,21,to_date('22/03/01','RR/MM/DD'));
+Insert into BUS.RESERV_INFO (RESERVATION_NO,RUN_ID,RIDE_DATE) values (3,41,to_date('22/02/24','RR/MM/DD'));
+Insert into BUS.RESERV_INFO (RESERVATION_NO,RUN_ID,RIDE_DATE) values (4,42,to_date('22/02/24','RR/MM/DD'));
+Insert into BUS.RESERV_INFO (RESERVATION_NO,RUN_ID,RIDE_DATE) values (5,44,to_date('22/02/28','RR/MM/DD'));
+REM INSERTING into BUS.RESERV_SEAT
+SET DEFINE OFF;
+Insert into BUS.RESERV_SEAT (SEAT_ID,BUS_ID,RESERVATION_NO,RUN_ID,RESERV_DATE) values ('A1','1401',1,41,'2022/02/18');
+Insert into BUS.RESERV_SEAT (SEAT_ID,BUS_ID,RESERVATION_NO,RUN_ID,RESERV_DATE) values ('A1','1109',2,39,'2022/02/19');
+Insert into BUS.RESERV_SEAT (SEAT_ID,BUS_ID,RESERVATION_NO,RUN_ID,RESERV_DATE) values ('A2','1109',2,39,'2022/02/19');
+Insert into BUS.RESERV_SEAT (SEAT_ID,BUS_ID,RESERVATION_NO,RUN_ID,RESERV_DATE) values ('C1','1001',2,21,'2022/03/01');
+Insert into BUS.RESERV_SEAT (SEAT_ID,BUS_ID,RESERVATION_NO,RUN_ID,RESERV_DATE) values ('C2','1001',2,21,'2022/03/01');
+Insert into BUS.RESERV_SEAT (SEAT_ID,BUS_ID,RESERVATION_NO,RUN_ID,RESERV_DATE) values ('A1','1401',3,41,'2022/02/24');
+Insert into BUS.RESERV_SEAT (SEAT_ID,BUS_ID,RESERVATION_NO,RUN_ID,RESERV_DATE) values ('A1','1402',4,42,'2022/02/24');
+Insert into BUS.RESERV_SEAT (SEAT_ID,BUS_ID,RESERVATION_NO,RUN_ID,RESERV_DATE) values ('A1','1404',5,44,'2022/02/28');
+REM INSERTING into BUS.RUN
+SET DEFINE OFF;
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (21,'1001','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (22,'1002','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),19600);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (23,'1003','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),10300);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (24,'1004','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (25,'1005','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (26,'1006','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (27,'1007','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),19600);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (28,'1008','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),10300);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (29,'1009','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (30,'1010','c001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),19600);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (31,'1101','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (32,'1102','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),19600);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (33,'1103','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),10300);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (34,'1104','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (35,'1105','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (36,'1106','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (37,'1107','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),19600);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (38,'1108','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),10300);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (39,'1109','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),15100);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (40,'1110','a001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),19600);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (1,'1201','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),22000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (2,'1202','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),32000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (3,'1203','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),22000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (4,'1204','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),25000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (5,'1205','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),22000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (6,'1206','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),25000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (7,'1207','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),25000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (8,'1208','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),22000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (9,'1209','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),32000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (10,'1210','c001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),32000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (11,'1301','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),22000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (12,'1302','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),32000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (13,'1303','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),22000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (14,'1304','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),32000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (15,'1305','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),25000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (16,'1306','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),25000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (17,'1307','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),22000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (18,'1308','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),25000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (19,'1309','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),22000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (20,'1310','b001','c001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),32000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (41,'1401','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (42,'1402','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (43,'1403','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),46800);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (44,'1404','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (45,'1405','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),24200);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (46,'1406','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (47,'1407','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),46800);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (48,'1408','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),24200);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (49,'1409','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),24200);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (50,'1410','a001','b001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (51,'1501','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (52,'1502','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (53,'1503','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),24200);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (54,'1504','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),46800);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (55,'1505','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),24200);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (56,'1506','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (57,'1507','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),46800);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (58,'1508','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (59,'1509','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),46800);
+Insert into BUS.RUN (RUN_ID,BUS_ID,START_TERMINAL,END_TERMINAL,START_TIME,END_TIME,PRICE) values (60,'1510','b001','a001',to_date('22/02/01','RR/MM/DD'),to_date('22/02/01','RR/MM/DD'),36000);
+REM INSERTING into BUS.SEAT
+SET DEFINE OFF;
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1001');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1002');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1003');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1004');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1005');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1006');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1007');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1008');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1009');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1010');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1101');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1102');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1103');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1104');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1105');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1106');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1107');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1108');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1109');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1110');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1201');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1202');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1203');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1204');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1205');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1206');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1207');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1208');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1209');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1210');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1301');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1302');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1303');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1304');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1305');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1306');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1307');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1308');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1309');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1310');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1401');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1402');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1403');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1404');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1405');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1406');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1407');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1408');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1409');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1410');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1501');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1502');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1503');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1504');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1505');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1506');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1507');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1508');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1509');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A1','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A2','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A3','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A4','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A5','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A6','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A7','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A8','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('A9','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B1','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B2','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B3','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B4','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B5','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B6','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B7','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B8','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('B9','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C1','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C2','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C3','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C4','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C5','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C6','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C7','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C8','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('C9','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D1','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D2','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D3','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D4','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D5','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D6','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D7','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D8','1510');
+Insert into BUS.SEAT (SEAT_ID,BUS_ID) values ('D9','1510');
+REM INSERTING into BUS.SYSTEM
+SET DEFINE OFF;
+Insert into BUS.SYSTEM (SYS_ID,SYS_NAME,SYS_PASSWORD) values ('system','관리자','1234');
+Insert into BUS.SYSTEM (SYS_ID,SYS_NAME,SYS_PASSWORD) values ('admin','관리자','1234');
+REM INSERTING into BUS.TERMINAL
+SET DEFINE OFF;
+Insert into BUS.TERMINAL (TERMINAL_ID,TERMINAL_NAME) values ('a001','서울경부');
+Insert into BUS.TERMINAL (TERMINAL_ID,TERMINAL_NAME) values ('b001','부산종합');
+Insert into BUS.TERMINAL (TERMINAL_ID,TERMINAL_NAME) values ('c001','대전복합');
+--------------------------------------------------------
+--  DDL for Index PK_CS
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_CS" ON "BUS"."CS" ("CS_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_PAYMENT
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_PAYMENT" ON "BUS"."PAYMENT" ("RESERVATION_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_SEAT
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_SEAT" ON "BUS"."SEAT" ("SEAT_ID", "BUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_MEMBER
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_MEMBER" ON "BUS"."MEMBER" ("MEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_REFUND
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_REFUND" ON "BUS"."REFUND" ("RESERVATION_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_PAYMENT_METHOD
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_PAYMENT_METHOD" ON "BUS"."PAYMENT_METHOD" ("METHOD_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_SYSTEM
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_SYSTEM" ON "BUS"."SYSTEM" ("SYS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_NOTICE
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_NOTICE" ON "BUS"."NOTICE" ("NOTICE_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_TERMINAL
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_TERMINAL" ON "BUS"."TERMINAL" ("TERMINAL_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_RESERV_SEAT
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_RESERV_SEAT" ON "BUS"."RESERV_SEAT" ("SEAT_ID", "BUS_ID", "RESERV_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_ANSWER
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_ANSWER" ON "BUS"."ANSWER" ("CS_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_RESERVATION
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_RESERVATION" ON "BUS"."RESERVATION" ("RESERVATION_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_RESERV_INFO
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_RESERV_INFO" ON "BUS"."RESERV_INFO" ("RESERVATION_NO", "RUN_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_RUN
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_RUN" ON "BUS"."RUN" ("RUN_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_BUS
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BUS"."PK_BUS" ON "BUS"."BUS" ("BUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  Constraints for Table SYSTEM
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."SYSTEM" ADD CONSTRAINT "PK_SYSTEM" PRIMARY KEY ("SYS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."SYSTEM" MODIFY ("SYS_PASSWORD" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."SYSTEM" MODIFY ("SYS_NAME" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."SYSTEM" MODIFY ("SYS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table REFUND
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."REFUND" ADD CONSTRAINT "PK_REFUND" PRIMARY KEY ("RESERVATION_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."REFUND" MODIFY ("REFUND_DATE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."REFUND" MODIFY ("RESERVATION_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table ANSWER
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."ANSWER" ADD CONSTRAINT "PK_ANSWER" PRIMARY KEY ("CS_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."ANSWER" MODIFY ("ANSWER_DATE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."ANSWER" MODIFY ("CS_ANSWER" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."ANSWER" MODIFY ("CS_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table BUS
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."BUS" ADD CONSTRAINT "PK_BUS" PRIMARY KEY ("BUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."BUS" MODIFY ("GRADE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."BUS" MODIFY ("COM_NAME" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."BUS" MODIFY ("BUS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table RESERV_SEAT
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."RESERV_SEAT" ADD CONSTRAINT "PK_RESERV_SEAT" PRIMARY KEY ("SEAT_ID", "BUS_ID", "RESERV_DATE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."RESERV_SEAT" MODIFY ("RESERV_DATE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RESERV_SEAT" MODIFY ("RUN_ID" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RESERV_SEAT" MODIFY ("RESERVATION_NO" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RESERV_SEAT" MODIFY ("BUS_ID" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RESERV_SEAT" MODIFY ("SEAT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table RESERV_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."RESERV_INFO" ADD CONSTRAINT "PK_RESERV_INFO" PRIMARY KEY ("RESERVATION_NO", "RUN_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."RESERV_INFO" MODIFY ("RIDE_DATE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RESERV_INFO" MODIFY ("RUN_ID" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RESERV_INFO" MODIFY ("RESERVATION_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table RESERVATION
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."RESERVATION" ADD CONSTRAINT "PK_RESERVATION" PRIMARY KEY ("RESERVATION_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."RESERVATION" MODIFY ("MEM_ID" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RESERVATION" MODIFY ("RESERVATION_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table PAYMENT_METHOD
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."PAYMENT_METHOD" ADD CONSTRAINT "PK_PAYMENT_METHOD" PRIMARY KEY ("METHOD_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."PAYMENT_METHOD" MODIFY ("METHOD_NAME" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."PAYMENT_METHOD" MODIFY ("METHOD_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SEAT
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."SEAT" ADD CONSTRAINT "PK_SEAT" PRIMARY KEY ("SEAT_ID", "BUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."SEAT" MODIFY ("BUS_ID" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."SEAT" MODIFY ("SEAT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table PAYMENT
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."PAYMENT" ADD CONSTRAINT "PK_PAYMENT" PRIMARY KEY ("RESERVATION_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."PAYMENT" MODIFY ("PAY_DATE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."PAYMENT" MODIFY ("RESERVATION_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table NOTICE
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."NOTICE" ADD CONSTRAINT "PK_NOTICE" PRIMARY KEY ("NOTICE_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."NOTICE" MODIFY ("SYS_ID" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."NOTICE" MODIFY ("NOTICE_TITLE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."NOTICE" MODIFY ("NOTICE_DATE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."NOTICE" MODIFY ("NOTICE_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table RUN
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."RUN" ADD CONSTRAINT "PK_RUN" PRIMARY KEY ("RUN_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."RUN" MODIFY ("PRICE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RUN" MODIFY ("END_TIME" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RUN" MODIFY ("START_TIME" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RUN" MODIFY ("END_TERMINAL" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RUN" MODIFY ("START_TERMINAL" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RUN" MODIFY ("BUS_ID" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."RUN" MODIFY ("RUN_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MEMBER
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."MEMBER" ADD CONSTRAINT "PK_MEMBER" PRIMARY KEY ("MEM_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."MEMBER" MODIFY ("BIRTHDAY" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."MEMBER" MODIFY ("MEM_NAME" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."MEMBER" MODIFY ("PASSWORD" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."MEMBER" MODIFY ("MEM_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TERMINAL
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."TERMINAL" ADD CONSTRAINT "PK_TERMINAL" PRIMARY KEY ("TERMINAL_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."TERMINAL" MODIFY ("TERMINAL_NAME" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."TERMINAL" MODIFY ("TERMINAL_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CS
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."CS" ADD CONSTRAINT "PK_CS" PRIMARY KEY ("CS_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "BUS"."CS" MODIFY ("CS_CONTENT" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."CS" MODIFY ("CS_TITLE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."CS" MODIFY ("CS_DATE" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."CS" MODIFY ("MEM_ID" NOT NULL ENABLE);
+  ALTER TABLE "BUS"."CS" MODIFY ("CS_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table ANSWER
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."ANSWER" ADD CONSTRAINT "FK_CS_TO_ANSWER" FOREIGN KEY ("CS_NO")
+	  REFERENCES "BUS"."CS" ("CS_NO") ENABLE;
+  ALTER TABLE "BUS"."ANSWER" ADD CONSTRAINT "FK_SYSTEM_TO_ANSWER" FOREIGN KEY ("SYS_ID")
+	  REFERENCES "BUS"."SYSTEM" ("SYS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CS
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."CS" ADD CONSTRAINT "FK_MEMBER_TO_CS" FOREIGN KEY ("MEM_ID")
+	  REFERENCES "BUS"."MEMBER" ("MEM_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table NOTICE
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."NOTICE" ADD CONSTRAINT "FK_SYSTEM_TO_NOTICE" FOREIGN KEY ("SYS_ID")
+	  REFERENCES "BUS"."SYSTEM" ("SYS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table PAYMENT
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."PAYMENT" ADD CONSTRAINT "FK_RESERVATION_TO_PAYMENT" FOREIGN KEY ("RESERVATION_NO")
+	  REFERENCES "BUS"."RESERVATION" ("RESERVATION_NO") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table RESERVATION
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."RESERVATION" ADD CONSTRAINT "FK_MEMBER_TO_RESERVATION" FOREIGN KEY ("MEM_ID")
+	  REFERENCES "BUS"."MEMBER" ("MEM_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table RESERV_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."RESERV_INFO" ADD CONSTRAINT "FK_RESERVATION_TO_RESERV_INFO" FOREIGN KEY ("RESERVATION_NO")
+	  REFERENCES "BUS"."RESERVATION" ("RESERVATION_NO") ENABLE;
+  ALTER TABLE "BUS"."RESERV_INFO" ADD CONSTRAINT "FK_RUN_TO_RESERV_INFO" FOREIGN KEY ("RUN_ID")
+	  REFERENCES "BUS"."RUN" ("RUN_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table RESERV_SEAT
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."RESERV_SEAT" ADD CONSTRAINT "FK_RESERV_INFO_TO_RESERV_SEAT" FOREIGN KEY ("RESERVATION_NO", "RUN_ID")
+	  REFERENCES "BUS"."RESERV_INFO" ("RESERVATION_NO", "RUN_ID") ENABLE;
+  ALTER TABLE "BUS"."RESERV_SEAT" ADD CONSTRAINT "FK_SEAT_TO_RESERV_SEAT" FOREIGN KEY ("SEAT_ID", "BUS_ID")
+	  REFERENCES "BUS"."SEAT" ("SEAT_ID", "BUS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table RUN
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."RUN" ADD CONSTRAINT "FK_BUS_TO_RUN" FOREIGN KEY ("BUS_ID")
+	  REFERENCES "BUS"."BUS" ("BUS_ID") ENABLE;
+  ALTER TABLE "BUS"."RUN" ADD CONSTRAINT "FK_TERMINAL_TO_RUN" FOREIGN KEY ("START_TERMINAL")
+	  REFERENCES "BUS"."TERMINAL" ("TERMINAL_ID") ENABLE;
+  ALTER TABLE "BUS"."RUN" ADD CONSTRAINT "FK_TERMINAL_TO_RUN2" FOREIGN KEY ("END_TERMINAL")
+	  REFERENCES "BUS"."TERMINAL" ("TERMINAL_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SEAT
+--------------------------------------------------------
+
+  ALTER TABLE "BUS"."SEAT" ADD CONSTRAINT "FK_BUS_TO_SEAT" FOREIGN KEY ("BUS_ID")
+	  REFERENCES "BUS"."BUS" ("BUS_ID") ENABLE;
